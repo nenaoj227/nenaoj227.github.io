@@ -152,7 +152,7 @@ aside#sidebar .quote input, aside#sidebar .quote textarea{
 #main-col{
   margin:1.5em;
     padding:1em;
-    text-align:center;
+    text-align:left;
 }
 
 /* Services */
