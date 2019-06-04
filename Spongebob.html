@@ -8,10 +8,14 @@
 <body>
 <script type="text/processing">
 
-// Help Spongebob protect Bikini Bottom from Pinhead Patrick Star and the ALaskan Bullworm
+/***
+Spongebob Squarepants: Battle For Bikini Bottom
+Description:
+Help Spongebob protect Bikini Bottom from Pinhead Patrick
+Star and the ALaskan Bullworm ***/
 
 PFont font1; PFont font2; PFont bold;
-PImage bg; PImage bg2; PImage head; PImage costume;
+PImage bg; PImage bg2; PImage head; PImage costume; PImage head2;
 int x; int cx; int cy; int cVy;
 int numKnives = 7;
 int gameState; PImage knife; int[] kx = new int[numKnives]; int[] ky = new int[numKnives]; int count;
@@ -31,16 +35,17 @@ void setup(){
   bold = createFont("GEORGIA", 24);
   size(800,600);
 // Images used throughout the game
-  bg = loadImage("bg.jpg");
-  bg2 = loadImage("bg2.jpg");
-  head = loadImage("head.png");
+  bg = loadImage("./img/bg.jpg");
+  bg2 = loadImage("./img/bg2.jpg");
+  head = loadImage("./img/head.png");
+  head2 = loadImage("./img/head2.png");
   costume = head;
   
   
-  knife = loadImage("ghost.png");
-  worm = loadImage("bullet.png");
-  jellyfish = loadImage("fire.png");
-  back2 = loadImage("back2.jpg");
+  knife = loadImage("./img/ghost.png");
+  worm = loadImage("./img/bullet.png");
+  jellyfish = loadImage("./img/fire.png");
+  back2 = loadImage("./img/back2.jpg");
   
   cVy = 2;
   cy = 100;
@@ -242,7 +247,10 @@ void keyReleased() {
 }
 void mousePressed(){
   cVy = -11; 
+  costume = head2;
 }
+
+  
 
 
 
